@@ -14,7 +14,7 @@ decodecode = require 'gulp-decodecode'
 browserSync = require 'browser-sync'
 
 SRC = './src'
-DEST = '.'
+DEST = '..'
 
 # html
 gulp.task 'pug', () ->
