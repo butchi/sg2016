@@ -18,7 +18,7 @@ DEST = '..'
 
 # html
 gulp.task 'pug', () ->
-  return gulp.src("#{SRC}/pug/*.pug")
+  return gulp.src(["#{SRC}/pug/**/*.pug", "!#{SRC}/pug/_**/*", "!#{SRC}/pug/**/_*"])
     .pipe pug
       # locals: locals,
       pretty: true,
