@@ -1,15 +1,15 @@
-* {
-  box-sizing: border-box;
-}
+// reset css
+@import 'bower_components/reset-css/reset.css';
 
-html {
-  font-size: 10px;
-}
+// config
+@import 'variable', 'function', 'mixin', 'keyframes';
 
-body {
-  font-size: 1.4rem;
-}
+// my reset
+@import 'init';
 
-main {
-  display: block;
-}
+// modules
+@import 'module/wrapper';
+
+// pages
+@import 'page/index';
+@import 'page/sub';
