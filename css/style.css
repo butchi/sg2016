@@ -1,3 +1,51 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 * {
   box-sizing: border-box; }
 
@@ -10,3 +58,49 @@ body {
 
 main {
   display: block; }
+
+.wrapper {
+  font-family: sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5; }
+
+body.page-sub .inner-block {
+  position: relative;
+  width: 300px;
+  width: 30rem;
+  left: 50%;
+  margin-left: -150px;
+  margin-left: -15rem; }
+
+body.page-sub .main .image {
+  position: relative;
+  font-size: 0; }
+  body.page-sub .main .image img {
+    width: 300px;
+    width: 30rem;
+    height: 300px;
+    height: 30rem; }
+  body.page-sub .main .image .link {
+    width: 100%;
+    height: 100%; }
+    body.page-sub .main .image .link:after {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 50px;
+      width: 5rem;
+      height: 50px;
+      height: 5rem;
+      margin-left: -25px;
+      margin-left: -2.5rem;
+      margin-top: -25px;
+      margin-top: -2.5rem;
+      background-image: url(../img/play-btn.svg);
+      background-repeat: no-repeat; }
+      body.page-sub .main .image .link:hover:after {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
+    body.page-sub .main .image .link:after {
+      content: ""; }
