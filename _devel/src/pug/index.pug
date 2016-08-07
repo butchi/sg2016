@@ -4,9 +4,13 @@ prepend ConfigBlock
   - page_name = ''
   - pageId = 'page-index'
 
-//- append StylesheetBlock
+append StylesheetBlock
+  link(rel="stylesheet", href="css/style.css")
 
-//- append JavascriptBlock
+append JavascriptBlock
+  script(src='js/lib/jquery.min.js')
+  script(src='js/lib/lodash.min.js')
+  script(src="js/main.js")
 
 block ContentBlock
   header

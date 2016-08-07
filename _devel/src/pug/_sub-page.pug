@@ -5,6 +5,14 @@ prepend ConfigBlock
   - pageId = 'page-sub'
   - twitterUrl = '#'
 
+append StylesheetBlock
+  link(rel="stylesheet", href="../css/style.css")
+
+block JavascriptBlock
+  script(src='../js/lib/jquery.min.js')
+  script(src='../js/lib/lodash.min.js')
+  script(src="../js/main.js")
+
 block ContentBlock
   main
     p: a(href= twitterUrl)
