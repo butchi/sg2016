@@ -1,0 +1,58 @@
+body.page-sub {
+  .inner-block {
+    position: relative;
+
+    width: 30rem;
+
+    left: 50%;
+
+    margin-left: -15rem;
+  }
+
+  .main {
+    .image {
+      img {
+        width: 30rem;
+        height: 30rem;
+      }
+
+      position: relative;
+
+      font-size: 0;
+
+      .link {
+        width: 100%;
+        height: 100%;
+
+        &%btn-play {
+          $size: 5rem;
+          display: block;
+
+          position: absolute;
+
+          left: 50%;
+          top: 50%;
+
+          width: $size;
+          height: $size;
+
+          margin-left: - $size / 2;
+          margin-top: - $size / 2;
+
+          background-image: url(../img/play-btn.svg);
+          background-repeat: no-repeat;
+
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+
+        &::after {
+          content: "";
+
+          @extend %btn-play;
+        }
+      }
+    }
+  }
+}

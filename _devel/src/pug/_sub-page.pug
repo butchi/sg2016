@@ -1,9 +1,11 @@
 extends ./_layout/DefaultLayout
 
-prepend ConfigBlock
+append ConfigBlock
+  - relativePath = '..'
   - page_name = ''
   - pageId = 'page-sub'
   - twitterUrl = '#'
+  - imagePath = '../img/'
 
 append StylesheetBlock
   link(rel="stylesheet", href="../css/style.css")
@@ -14,6 +16,8 @@ append JavascriptBlock
   script(src="../js/main.js")
 
 block ContentBlock
-  main
-    p: a(href= twitterUrl)
-      | Twitterで見る
+  main.main
+    .inner-block
+      .image
+        a.link(href= twitterUrl, target='_blank')
+          img(src= imagePath)

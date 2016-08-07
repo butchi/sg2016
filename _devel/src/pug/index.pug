@@ -1,6 +1,7 @@
 extends ./_layout/DefaultLayout
 
-prepend ConfigBlock
+append ConfigBlock
+  - relativePath = '.'
   - page_name = ''
   - pageId = 'page-index'
 
