@@ -18,9 +18,15 @@ DEST = '..'
 
 # html
 gulp.task 'pug', () ->
+  # FIXME: adapt read-config
+  locals = {
+    "site_name": "SG2016",
+    "description": "金沢大学美術部学外展「セカンドギャラリー」の作品です。",
+    "keywords": ["フラクタル", "音楽", "カーペットフラクタル", "CG", "幾何学", "平面幾何"]
+  };
   return gulp.src(["#{SRC}/pug/**/*.pug", "!#{SRC}/pug/_**/*", "!#{SRC}/pug/**/_*"])
     .pipe pug
-      # locals: locals,
+      locals: locals,
       pretty: true,
     .pipe gulp.dest "#{DEST}"
 

@@ -1,31 +1,30 @@
-doctype html
-html(lang='ja')
-  head
-    meta(charset='UTF-8')
-    title page
-    link(rel='stylesheet', href='css/style.css')
-  body.page-index
-    .wrapper
-      header
-        h1(data-heading-level='1')
-          | フラクタル音楽
-      main
-        ul
-          li: a(href="./real-xor/")
-            | Real Xor
-          li: a(href="./2016-06-13/")
-            | 2016-06-13
-          li: a(href="./2016-06-15/")
-            | 2016-06-15
-          li: a(href="./2016-07-10/")
-            | 2016-07-10
-          li: a(href="./2016-07-12/")
-            | 2016-07-12
-          li: a(href="./2016-07-22/")
-            | 2016-07-22
-          li: a(href="./2016-07-26/")
-            | 2016-07-26
+extends ./_layout/DefaultLayout
 
-    script(src='js/lib/jquery.min.js')
-    script(src='js/lib/lodash.min.js')
-    script(src='js/main.js')
+prepend ConfigBlock
+  - page_name = ''
+  - pageId = 'page-index'
+
+//- append StylesheetBlock
+
+//- append JavascriptBlock
+
+block ContentBlock
+  header
+    h1(data-heading-level='1')
+      | フラクタル音楽
+  main
+    ul
+      li: a(href="./real-xor/")
+        | Real Xor
+      li: a(href="./2016-06-13/")
+        | 2016-06-13
+      li: a(href="./2016-06-15/")
+        | 2016-06-15
+      li: a(href="./2016-07-10/")
+        | 2016-07-10
+      li: a(href="./2016-07-12/")
+        | 2016-07-12
+      li: a(href="./2016-07-22/")
+        | 2016-07-22
+      li: a(href="./2016-07-26/")
+        | 2016-07-26
