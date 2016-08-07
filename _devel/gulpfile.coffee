@@ -55,10 +55,17 @@ gulp.task 'sass', () ->
 
 gulp.task 'css', gulp.series('sass')
 
-gulp.task 'copy-bower', () -> 
-  return gulp.src ['jquery/dist/jquery.min.js', 'lodash/dist/lodash.min.js'],
+gulp.task 'copy-bower-css', () ->
+  return gulp.src ['material-design-lite/material.min.css'],
+    cwd: 'bower_components',
+  .pipe(gulp.dest "#{DEST}/css")
+
+gulp.task 'copy-bower-js', () ->
+  return gulp.src ['jquery/dist/jquery.min.js', 'lodash/dist/lodash.min.js', 'material-design-lite/material.min.js'],
     cwd: 'bower_components',
   .pipe(gulp.dest "#{DEST}/js/lib")
+
+gulp.task('copy-bower', gulp.parallel('copy-bower-css', 'copy-bower-js'))
 
 gulp.task 'browserify', () ->
   return browserify("#{SRC}/js/main.js")
@@ -91,11 +98,11 @@ gulp.task 'browser-sync' , () ->
       baseDir: DEST
     }
 
-  gulp.watch(["#{SRC}/scss/**/*.scss"], gulp.series('sass', browserSync.reload));
-  gulp.watch(["#{SRC}/js/**/*.js"], gulp.series('browserify', browserSync.reload));
-  gulp.watch(["#{SRC}/pug/**/*.pug"], gulp.series('pug', browserSync.reload));
+  gulp.watch(["#{SRC}/scss/**/*.scss"], gulp.series('sass', browserSync.reload))
+  gulp.watch(["#{SRC}/js/**/*.js"], gulp.series('browserify', browserSync.reload))
+  gulp.watch(["#{SRC}/pug/**/*.pug"], gulp.series('pug', browserSync.reload))
 
-gulp.task('serve', gulp.series('browser-sync'));
+gulp.task('serve', gulp.series('browser-sync'))
 
-gulp.task('build', gulp.parallel('css', 'js', 'html'));
-gulp.task 'default', gulp.series('build', 'serve');
+gulp.task('build', gulp.parallel('css', 'js', 'html'))
+gulp.task 'default', gulp.series('build', 'serve')
