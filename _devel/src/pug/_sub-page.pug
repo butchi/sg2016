@@ -1,20 +1,11 @@
-block vars
-  - var twitterUrl = '#'
+extends ./_layout/DefaultLayout
 
-doctype html
-html(lang='ja')
-  head
-    meta(charset='UTF-8')
-    title page
-    link(rel='stylesheet', href='css/style.css')
+prepend ConfigBlock
+  - page_name = ''
+  - pageId = 'page-sub'
+  - twitterUrl = '#'
 
-  body.page-sub
-    .wrapper
-      main
-        p: a(href= twitterUrl)
-          | Twitterで見る
-
-    include ./_partial/ga.html
-    // script(src='js/lib/jquery.min.js')
-    // script(src='js/lib/lodash.min.js')
-    // script(src='js/main.js')
+block ContentBlock
+  main
+    p: a(href= twitterUrl)
+      | Twitterで見る
