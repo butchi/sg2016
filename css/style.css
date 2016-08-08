@@ -65,6 +65,25 @@ main {
   font-size: 1.4rem;
   line-height: 1.5; }
 
+body.page-index .inner-block {
+  position: relative;
+  width: 300px;
+  width: 30rem;
+  left: 50%;
+  margin-left: -150px;
+  margin-left: -15rem; }
+
+body.page-index .heading {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 28px;
+  font-size: 2.8rem; }
+
+body.page-index .list {
+  margin-top: 30px;
+  font-size: 21px;
+  font-size: 2.1rem; }
+
 body.page-sub .inner-block {
   position: relative;
   width: 300px;
@@ -74,6 +93,7 @@ body.page-sub .inner-block {
   margin-left: -15rem; }
 
 body.page-sub .main .image {
+  margin-top: 30px;
   position: relative;
   font-size: 0; }
   body.page-sub .main .image img {
@@ -104,3 +124,21 @@ body.page-sub .main .image {
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
     body.page-sub .main .image .link:after {
       content: ""; }
+
+body.page-sub .footer {
+  margin-top: 30px;
+  text-align: center; }
+  body.page-sub .footer .icon-home {
+    font-size: 40px;
+    font-size: 4rem; }
+
+body.page-sub .credit {
+  margin-top: 30px;
+  text-align: right; }
+  body.page-sub .credit .thanks {
+    font-size: 7px;
+    font-size: 0.7rem; }
+  body.page-sub .credit .copyright {
+    margin-top: 10px;
+    font-size: 14px;
+    font-size: 1.4rem; }

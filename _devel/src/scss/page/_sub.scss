@@ -11,6 +11,8 @@ body.page-sub {
 
   .main {
     .image {
+      margin-top: 30px;
+
       img {
         width: 30rem;
         height: 30rem;
@@ -53,6 +55,31 @@ body.page-sub {
           @extend %btn-play;
         }
       }
+    }
+  }
+
+  .footer {
+    margin-top: 30px;
+
+    text-align: center;
+
+    .icon-home {
+      font-size: 4rem;
+    }
+  }
+
+  .credit {
+    margin-top: 30px;
+
+    text-align: right;
+
+    .thanks {
+      font-size: $base-font-size * 0.5;
+    }
+
+    .copyright {
+      margin-top: 10px;
+      font-size: $base-font-size;
     }
   }
 }

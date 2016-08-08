@@ -22,9 +22,21 @@ block ContentBlock
         a.link(href= twitterUrl, target='_blank')
           img(src= imagePath)
 
-  aside
-    p
-      | Icon made by 
-      a(href="http://www.flaticon.com/authors/madebyoliver", target="_blank") Madebyoliver
-      |  from 
-      a(href="http://www.flaticon.com/", target="_blank") www.flaticon.com
+  footer.footer
+    ul.list
+      li.item
+        a(href= relativePath)
+          i.icon-home.fa.fa-home
+
+  aside.credit
+    .inner-block
+      p.thanks
+        small
+          | Icon made by 
+          a(href="http://www.flaticon.com/authors/madebyoliver", target="_blank") Madebyoliver
+          |  from 
+          a(href="http://www.flaticon.com/", target="_blank") www.flaticon.com
+      p.copyright
+        | &copy;
+        a(href="http://butchi.jp/")
+          | IWABUCHI Yu(u)ki

@@ -1,0 +1,25 @@
+body.page-index {
+  .inner-block {
+    position: relative;
+
+    width: 30rem;
+
+    left: 50%;
+
+    margin-left: -15rem;
+  }
+
+  .heading {
+    margin-top: 30px;
+
+    text-align: center;
+
+    font-size: $base-font-size * 2;
+  }
+
+  .list {
+    margin-top: 30px;
+
+    font-size: $base-font-size * 1.5;
+  }
+}
